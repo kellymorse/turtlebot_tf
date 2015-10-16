@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- Khelifa Baizid, Oct 2015
+this node provides a transformation from the laser frame to the base_link frame and from the base_link frame to odom frame based on the /odometry topic
+-->
+
+<launch>
+
+  <node pkg="turtlebot_tf" type="turtlebot_tf_node" name="turtlebot_tf_node" output= "screen" >
+    <!-- oddometry topic name-->
+    <param name="odometry_topic_name" value="/odom"/>
+
+    <!-- position of the URG laser with regarding to base_link frame-->
+    <param name="x_laser" value="0.0"/>
+    <param name="y_laser" value="0.0"/>
+    <param name="z_laser" value="0.0478"/>
+    
+    <!-- orientation of the URG laser with regarding to base_link frame-->
+    <param name="roll_laser" value="0.0"/>
+    <param name="pitch_laser" value="0.0"/>
+    <param name="yaw_laser" value="0.0"/>
+  </node>
+
+</launch>
