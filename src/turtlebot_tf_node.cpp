@@ -76,7 +76,7 @@ int main(int argc, char** argv){
   //we define the subscriber to odometry
   ros::Subscriber sub = nh.subscribe<nav_msgs::Odometry>(odometry_topic_name, 10, &odometryCallback);
 
-  std::cout<<"***************[ STARING turtlebot_tf_node]***************** "std::endl;
+  std::cout<<"***************[ STARING turtlebot_tf_node]***************** "<<std::endl;
 
   ros::spin();
   return 0;
