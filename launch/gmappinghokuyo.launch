@@ -4,12 +4,14 @@
 How to use turtlebot with hokuyo laser:
 -->
 
+
+
 <launch>
   <include file="$(find kobuki_node)/launch/minimal.launch" />
 
   <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node" />
 
-  <node pkg="turtlebot_tf" type="turtlebot_tf_node" name="turtlebot_tf_node" />
+  <include file="$(find turtlebot_tf)/launch/turtlebot_tf.launch" />
 
   <node pkg="gmapping" type="slam_gmapping" name="gmapping_node" >
 
